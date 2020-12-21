@@ -1,6 +1,6 @@
 const express = require("express");
 const { MongoClient } = require("mongodb");
-const debug = require("debug")("bookRoutes");
+const debug = require("debug")("app:bookRoutes");
 
 const adminRouter = express.Router();
 const books = [
