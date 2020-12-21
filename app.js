@@ -30,7 +30,7 @@ app.use(
 
 const port = process.env.PORT || 3000;
 const bookRouter = require("./src/routes/bookRoutes")(nav);
-const adminRouter = require("./src/routes/adminRouter")(nav);
+const adminRouter = require("./src/routes/adminRouter");
 
 app.use("/books", bookRouter);
 app.use("/admin", adminRouter);

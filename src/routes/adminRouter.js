@@ -1,6 +1,6 @@
 const express = require("express");
 const { MongoClient } = require("mongodb");
-const debug = require("debug")("app");
+const debug = require("debug")("bookRoutes");
 
 const adminRouter = express.Router();
 const books = [
@@ -18,7 +18,7 @@ const books = [
   },
 ];
 
-function router(nav) {
+function router() {
   adminRouter.route("/").get((req, res) => {
     const url = "mongodb://localhost:27017";
     const dbName = "libraryApp";
